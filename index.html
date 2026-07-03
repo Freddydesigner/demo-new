@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Fuego Parrilla | Las mejores parrillas en Valledupar</title>
+  <meta name="description" content="Parrilla premium en Valledupar. Cortes de carne a la brasa, chorizo, costillas y cerveza bien fría. Reserva tu mesa hoy.">
+  
+  <style>
+    :root{
+      --bg:#0F0F10;
+      --card:#1A1A1D;
+      --accent:#D97706; /* Dorado/brasa */
+      --accent-2:#EF4444; /* Rojo parrilla */
+      --text:#F5F5F4;
+      --muted:#A3A3A3;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block;border-radius:12px}
+    .container{width:min(1100px, 90%);margin-inline:auto}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(180%) blur(12px);
+      background:rgba(15,15,16,.7);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+    nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .logo{font-weight:800;font-size:1.2rem;letter-spacing:.5px}
+    .logo span{color:var(--accent)}
+    nav ul{display:flex;gap:24px;list-style:none}
+    nav a{color:var(--muted);text-decoration:none;font-weight:500}
+    nav a:hover{color:var(--text)}
+    .btn{
+      background:var(--accent);color:#000;text-decoration:none;
+      padding:12px 20px;border-radius:999px;font-weight:700;
+      transition:.2s;box-shadow:var(--shadow)
+    }
+    .btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
+    .btn-outline{background:transparent;border:1px solid var(--muted);color:var(--text)}
+
+    /* Hero */
+    .hero{
+      padding:100px 0 60px;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.7)),
+        url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format') center/cover;
+    }
+    .hero h1{font-size:clamp(2.5rem,5vw,4rem);line-height:1.1;margin-bottom:16px}
+    .hero p{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:24px}
+    .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Secciones */
+    section{padding:80px 0}
+    h2{font-size:2rem;margin-bottom:8px}
+    .sub{color:var(--muted);margin-bottom:32px}
+
+    /* Menú */
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card{
+      background:var(--card);padding:20px;border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.05);transition:.2s
+    }
+    .card:hover{transform:translateY(-5px);border-color:var(--accent)}
+    .card h3{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .price{color:var(--accent);font-weight:800}
+
+    /* Galería */
+    .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .galeria img{aspect-ratio:1/1;object-fit:cover}
+
+    /* Reserva */
+    .reserva{
+      background:var(--card);padding:32px;border-radius:var(--radius);
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center
+    }
+    input,textarea{
+      width:100%;padding:12px 14px;border-radius:10px;
+      border:1px solid rgba(255,255,255,.1);background:#0F0F10;color:var(--text)
+    }
+    label{font-size:.9rem;color:var(--muted);margin-bottom:6px;display:block}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.05);padding:40px 0;color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+
+    @media(max-width:768px){
+      nav ul{display:none}
+      .reserva{grid-template-columns:1fr}
+      .galeria{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">EL <span>FUEGO</span> PARRILLA</div>
+        <ul>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+        </ul>
+        <a href="https://wa.me/57300xxxxxxx" class="btn" target="_blank">Reservar por WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container">
+      <h1>Sabor a brasa, <br>carne de verdad.</h1>
+      <p>En El Fuego solo usamos cortes premium y carbón de leña. Ven a probar la parrilla que Valledupar estaba esperando.</p>
+      <div class="cta">
+        <a href="#menu" class="btn">Ver Menú</a>
+        <a href="#reserva" class="btn btn-outline">Reservar Mesa</a>
+      </div>
+    </div>
+  </main>
+
+  <section id="menu">
+    <div class="container">
+      <h2>Lo que sale de la parrilla</h2>
+      <p class="sub">Todo hecho al momento, con fuego lento y mucho sabor.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Costillar Premium <span class="price">$85.000</span></h3>
+          <p>500g de costilla de res 12h en brasa, con papas criollas y chimichurri.</p>
+        </div>
+        <div class="card">
+          <h3>Parrillada 2 Personas <span class="price">$120.000</span></h3>
+          <p>Chorizo, morcilla, punta de anca, pollo y arepa mantequilla.</p>
+        </div>
+        <div class="card">
+          <h3>Lomo Fino <span class="price">$55.000</span></h3>
+          <p>300g a término perfecto, mantequilla de ajo y vegetales asados.</p>
+        </div>
+        <div class="card">
+          <h3>Chorizo Artesanal <span class="price">$18.000</span></h3>
+          <p>Receta de la casa, servido con limón y arepa.</p>
+        </div>
+        <div class="card">
+          <h3>Costilla de Cerdo BBQ <span class="price">$48.000</span></h3>
+          <p>Glaseada con salsa BBQ ahumada y maíz.</p>
+        </div>
+        <div class="card">
+          <h3>Picada El Fuego <span class="price">$95.000</span></h3>
+          <p>Para 3-4 personas. Lo mejor de la parrilla en un solo plato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" style="background:var(--card)">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div>
+        <h2>Carne + Fuego = El Fuego</h2>
+        <p class="sub">Somos una parrilla familiar en Valledupar. Seleccionamos cada corte, maduramos la carne y la asamos solo con carbón de leña. Sin atajos, sin humo líquido. Solo brasa real.</p>
+        <ul style="color:var(--muted);list-style:inside">
+          <li>✅ Carnes 100% colombianas</li>
+          <li>✅ Parrilla a carbón, no a gas</li>
+          <li>✅ Ambiente familiar y música en vivo los viernes</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=800&auto=format" alt="Parrillero asando carne">
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="container">
+      <h2>Así se ve, así sabe</h2>
+      <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=600" alt="Costillas">
+        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069c550?q=80&w=600" alt="Parrilla">
+        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=600" alt="Carne jugosa">
+      </div>
+    </div>
+  </section>
+
+  <section id="reserva">
+    <div class="container">
+      <div class="reserva">
+        <div>
+          <h2>Reserva tu mesa</h2>
+          <p class="sub">Nos llenamos rápido los fines de semana. Escríbenos y te confirmamos en minutos.</p>
+          <p><strong>Horario:</strong> Mié a Dom, 5:00pm - 11:00pm <br>
+          <strong>Dirección:</strong> Cra 7 #15-32, Valledupar</p>
+        </div>
+        <form onsubmit="alert('Gracias! Te contactaremos por WhatsApp para confirmar.'); return false;">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre" required>
+          <label>Fecha y personas</label>
+          <input type="text" placeholder="Ej: Sábado 8pm, 4 personas" required>
+          <label>WhatsApp</label>
+          <input type="tel" placeholder="300 xxx xxxx" required>
+          <button class="btn" style="width:100%;margin-top:12px;border:0;cursor:pointer">Enviar Reserva</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">EL <span>FUEGO</span></div>
+        <p>La parrilla premium de Valledupar.</p>
+      </div>
+      <div>
+        <strong>Contacto</strong><br>
+        WhatsApp: 300 xxx xxxx <br>
+        Instagram: @elfuego.parrilla
+      </div>
+      <div>
+        <strong>Horario</strong><br>
+        Mié - Dom: 5pm a 11pm
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
