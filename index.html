@@ -93,31 +93,61 @@
     /* Footer */
     footer{border-top:1px solid rgba(255,255,255,.05);padding:40px 0;color:var(--muted)}
     .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+/* BASE NAVBAR */
+.navbar{display:flex; align-items:center; justify-content:space-between; padding:16px 5%}
+.logo span{color:#ff7a00; display:block}
+.nav-links{display:flex; gap:24px}
+.menu-btn{display:none; background:none; border:none; font-size:28px; color:#fff}
+.btn-whatsapp{background:#ff7a00; color:#000; padding:10px 18px; border-radius:999px; font-weight:700; text-decoration:none; white-space:nowrap}
+@media(max-width:768px){
+  nav.nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#1a1a1a;
+    flex-direction:column;
+    padding:16px;
+    gap:0;
+    border-top:1px solid #222;
+    z-index:99;
+  }
+  
+  nav.nav-links.active{display:flex} 
 
-    @media(max-width:768px){
-      nav ul{display:none}
-      .reserva{grid-template-columns:1fr}
-      .galeria{grid-template-columns:repeat(2,1fr)}
-    }
+  .menu-btn{display:block} 
+
+  .btn-whatsapp{font-size:12px; padding:8px 12px; margin-left:auto; margin-right:12px}
+
+  .grid-3{grid-template-columns:repeat(2,1fr); gap:12px} /* Menú en 2 columnas */
+  .cta{flex-direction:column; width:100%; gap:10px} /* Botones del hero */
+  .cta .btn{width:100%}
+}
   </style>
 </head>
 <body>
+<header class="navbar">
+  <a href="#" class="logo">
+    Bendita <span>Parrillada</span>
+  </a>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Bendita <span>Parrillada</span></div>
-          <li><a href="#menu">Menú</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#reserva">Reserva</a></li>
-        </ul>
-        <a href="https://wa.me/573013310343" class="btn" target="_blank">Reservar por WhatsApp</a>
-      </nav>
-    </div>
-  </header>
+  <nav class="nav-links" id="nav-links">
+    <a href="#menu">Menú</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#galeria">Galería</a>
+    <a href="#reserva">Reserva</a>
+  </nav>
 
-  <main class="hero">
+  <a href="https://wa.me/573013310343" target="_blank" class="btn-whatsapp">
+    Reservar por WhatsApp
+  </a>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
+    ☰
+  </button>
+</header>
+<main class="hero">
     <div class="container">
       <h1>Sabor a brasa, <br>carne de verdad.</h1>
       <p>En Bendita Parrilada solo usamos cortes premium y carbón de leña. Ven a probar la parrilla que Valledupar estaba esperando.</p>
@@ -226,6 +256,145 @@
       </div>
     </div>
   </footer>
+
+</head>
+<body>
+<header class="navbar">
+  <a href="#" class="logo">
+    Bendita <span>Parrillada</span>
+  </a>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="#menu">Menú</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#galeria">Galería</a>
+    <a href="#reserva">Reserva</a>
+  </nav>
+
+  <a href="https://wa.me/57TU_NUMERO" target="_blank" class="btn-whatsapp">
+    Reservar por WhatsApp
+  </a>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
+    ☰
+  </button>
+</header>
+<main class="hero">
+    <div class="container">
+      <h1>Sabor a brasa, <br>carne de verdad.</h1>
+      <p>En Bendita Parrilada solo usamos cortes premium y carbón de leña. Ven a probar la parrilla que Valledupar estaba esperando.</p>
+      <div class="cta">
+        <a href="#menu" class="btn">Ver Menú</a>
+        <a href="#reserva" class="btn btn-outline">Reservar Mesa</a>
+      </div>
+    </div>
+  </main>
+
+  <section id="menu">
+    <div class="container">
+      <h2>Lo que sale de la parrilla</h2>
+      <p class="sub">Todo hecho al momento, con fuego lento y mucho sabor.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Costillar Premium <span class="price">$85.000</span></h3>
+          <p>500g de costilla de res 12h en brasa, con papas criollas y chimichurri.</p>
+        </div>
+        <div class="card">
+          <h3>Parrillada 2 Personas <span class="price">$120.000</span></h3>
+          <p>Chorizo, morcilla, punta de anca, pollo y arepa mantequilla.</p>
+        </div>
+        <div class="card">
+          <h3>Lomo Fino <span class="price">$55.000</span></h3>
+          <p>300g a término perfecto, mantequilla de ajo y vegetales asados.</p>
+        </div>
+        <div class="card">
+          <h3>Chorizo Artesanal <span class="price">$18.000</span></h3>
+          <p>Receta de la casa, servido con limón y arepa.</p>
+        </div>
+        <div class="card">
+          <h3>Costilla de Cerdo BBQ <span class="price">$48.000</span></h3>
+          <p>Glaseada con salsa BBQ ahumada y maíz.</p>
+        </div>
+        <div class="card">
+          <h3>Picada El Fuego <span class="price">$95.000</span></h3>
+          <p>Para 3-4 personas. Lo mejor de la parrilla en un solo plato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" style="background:var(--card)">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div>
+        <h2>Carne + Fuego = El Fuego</h2>
+        <p class="sub">Somos una parrilla familiar en Valledupar. Seleccionamos cada corte, maduramos la carne y la asamos solo con carbón de leña. Sin atajos, sin humo líquido. Solo brasa real.</p>
+        <ul style="color:var(--muted);list-style:inside">
+          <li>✅ Carnes 100% colombianas</li>
+          <li>✅ Parrilla a carbón, no a gas</li>
+          <li>✅ Ambiente familiar y música en vivo los viernes</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=800&auto=format" alt="Parrillero asando carne">
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="container">
+      <h2>Así se ve, así sabe</h2>
+      <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=600" alt="Costillas">
+        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069c550?q=80&w=600" alt="Parrilla">
+        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=600" alt="Carne jugosa">
+      </div>
+    </div>
+  </section>
+
+  <section id="reserva">
+    <div class="container">
+      <div class="reserva">
+        <div>
+          <h2>Reserva tu mesa</h2>
+          <p class="sub">Nos llenamos rápido los fines de semana. Escríbenos y te confirmamos en minutos.</p>
+          <p><strong>Horario:</strong> Lunes a Dom, 4:00pm - 11:00pm <br>
+          <strong>Dirección:</strong> Cra 7 #15-32, Valledupar</p>
+        </div>
+        <form onsubmit="alert('Gracias! Te contactaremos por WhatsApp para confirmar.'); return false;">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre" required>
+          <label>Fecha y personas</label>
+          <input type="text" placeholder="Ej: Sábado 8pm, 4 personas" required>
+          <label>WhatsApp</label>
+          <input type="tel" placeholder="300 xxx xxxx" required>
+          <button class="btn" style="width:100%;margin-top:12px;border:0;cursor:pointer">Enviar Reserva</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">Bendita <span>Parrillada</span></div>
+        <p>La parrilla premium de Valledupar.</p>
+      </div>
+      <div>
+        <strong>Contacto</strong><br>
+        WhatsApp: 3013310343 <br>
+        Instagram: @benditaparrillada
+      </div>
+      <div>
+        <strong>Horario</strong><br>
+        Mié - Dom: 5pm a 11pm
+      </div>
+    </div>
+  </footer>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const nav = document.getElementById('nav-links');
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
