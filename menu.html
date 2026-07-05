@@ -154,6 +154,38 @@
 @media (max-width: 768px){
   .slides img{ height:250px; }
 }
+
+/* SOMBRA AL TEXTO DEL HERO PARA QUE SE LEA */
+section:first-of-type p {
+  color: #e0e0e0; /* más blanco */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8); /* sombra negra atrás */
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+section:first-of-type h1 {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9); /* que el título resalte más */
+  line-height: 1.2;
+}
+
+/* DAR AIRE ENTRE TITULO Y TARJETAS */
+.grid-3 {
+  margin-top: 30px;
+  gap: 16px; /* ya tienes grid arriba, solo agregamos gap */
+}
+.card {
+  padding: 20px;
+}
+
+/* QUE EL BOTON OCUPE TODO EN CEL */
+@media (max-width: 768px){
+  .hero .cta .btn{
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
 </style>
 </head>
 <body>
