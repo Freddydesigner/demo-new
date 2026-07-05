@@ -67,14 +67,37 @@
       font-size:14px;
       box-shadow: 0 6px 20px rgba(255,106,0,0.4);
     }
+   
     .btn-primario { 
-      background:#ff6a00; 
-      color:#000; 
-    }
-    .btn-primario:hover { 
-      background:#ff8533; 
-      transform:translateY(-3px); 
-    }
+  background:#ff6a00; 
+  color:#000;
+  animation: giro-salto 5s infinite; /* dura 5 seg el ciclo completo */
+  box-shadow: 0 0 25px rgba(255,106,0,0.6);
+  display: inline-block; /* importante para que el giro funcione bien */
+}
+
+@keyframes giro-salto {
+  /* 0% a 20% = 2 VUELTAS */
+ 0%   { transform: rotate(0deg) translateY(0); }
+  10%  { transform: rotate(360deg) translateY(0); } /* vuelta 1 */
+ 20%  { transform: rotate(720deg) translateY(0); } /* vuelta 2 */
+  
+  /* 20% a 40% = 2 SALTICOS */
+ 25%  { transform: rotate(720deg) translateY(-10px); } 
+ 30%  { transform: rotate(720deg) translateY(0); }    
+ 35%  { transform: rotate(720deg) translateY(-10px); } 
+ 40%  { transform: rotate(720deg) translateY(0); }     
+  
+  /* 40% a 100% = QUIETO ESPERANDO */
+ 100% { transform: rotate(720deg) translateY(0); }
+}
+
+.btn-primario:hover { 
+  background:#ff8533; 
+  transform: scale(1.05) rotate(720deg);
+  box-shadow: 0 0 35px rgba(255,106,0,0.9);
+  animation: none; /* para que no choque con la animación al pasar mouse */
+}
   </style>
 </head>
 <body>
