@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Bendita Parrillada v100| Las mejores parrillas en Valledupar</title>
   <meta name="description" content="Parrilla premium en Valledupar. Cortes de carne a la brasa, chorizo, costillas y cerveza bien fría. Reserva tu mesa hoy.">
-  
   <style>
     :root{
       --bg:#0F0F10;
@@ -30,12 +29,25 @@
 
     /* === HEADER / NAVBAR === */
     header{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:#0F0F10;
-  border-bottom:1px solid #222;
-}
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:#0F0F10;
+      border-bottom:1px solid #222;
+    }
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    
+    /* LOGO ARREGLADO */
+    .logo{
+      font-weight:800;
+      font-size:1.3rem;
+      letter-spacing:.5px;
+      text-decoration:none; /* Quita lo azul subrayado */
+      color:var(--text); /* Blanco */
+    }
+    .logo span{
+      color:var(--accent); /* Naranja */
+    }
 
     .nav-links{display:flex;gap:24px;list-style:none}
     .nav-links a{color:var(--muted);text-decoration:none;font-weight:500}
@@ -85,7 +97,7 @@
     .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 
     @media (max-width: 768px){
-      .btn-whatsapp{display:none !important;} /* OCULTA EL BOTON NARANJA EN CEL */
+      .btn-whatsapp{display:none !important;}
       
       .nav-links{
         display:none;
@@ -100,17 +112,17 @@
         z-index:999;
       }
       .nav-links a{padding:16px 20px;border-bottom:1px solid #222}
-      .nav-links.active{display:flex} /* Se activa con JS */
+      .nav-links.active{display:flex}
       
-      .menu-btn{display:block;margin-left:auto} /* MUESTRA EL ☰ */
+      .menu-btn{display:block;margin-left:auto}
 
       .grid-3{grid-template-columns:1fr}
       .galeria{grid-template-columns:1fr 1fr}
       .reserva{grid-template-columns:1fr}
       .hero .cta{flex-direction:column;width:100%;gap:10px}
       .hero .cta .btn{width:100%}
-    }
-  </style>
+    } 
+</style>
 </head>
 <body>
 
