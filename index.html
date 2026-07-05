@@ -192,25 +192,37 @@
     </div>
   </section>
 
-  <section id="reserva">
-    <div class="container">
-      <div class="reserva">
-        <div>
-          <h2>Reserva tu mesa</h2>
-          <p class="sub">Nos llenamos rápido los fines de semana. Escríbenos y te confirmamos en minutos.</p>
+<section id="reserva" style="background:#fff7ed; padding:40px 0;">
+  <div class="container">
+    <div class="reserva-info" style="max-width:700px; margin:0 auto; text-align:center;">
+      <h2>Reserva tu mesa 🔥</h2>
+      <p class="sub">Los fines de semana se llena rápido. Escríbenos y te guardamos tu mesa en 2 minutos.</p>
+      
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin:24px 0; text-align:left;">
+        <div style="background:#fff; padding:16px; border-radius:12px; border-left:4px solid #ff6a00;">
+          <b>⏰ Horarios</b><br>
+          Mar - Dom: 12pm a 11pm<br>
+          Lunes: Cerrado
         </div>
-        <form onsubmit="alert('Gracias! Te contactaremos por WhatsApp para confirmar.'); return false;">
-          <label>Nombre</label>
-          <input type="text" placeholder="Tu nombre" required>
-          <label>Fecha y personas</label>
-          <input type="text" placeholder="Ej: Sábado 8pm, 4 personas" required>
-          <label>WhatsApp</label>
-          <input type="tel" placeholder="300 xxx xxxx" required>
-          <button class="btn" style="width:100%;margin-top:12px;border:0;cursor:pointer">Enviar Reserva</button>
-        </form>
+        <div style="background:#fff; padding:16px; border-radius:12px; border-left:4px solid #ff6a00;">
+          <b>📍 Estamos en</b><br>
+          Cra 5 # 12-34, Valledupar<br>
+          <small>Parqueo disponible</small>
+        </div>
+        <div style="background:#fff; padding:16px; border-radius:12px; border-left:4px solid #ff6a00;">
+          <b>👥 Grupos</b><br>
+          De 2 a 20 personas
+        </div>
       </div>
+
+      <a href="https://wa.me/573013310343?text=Hola%20Bendita%20Parrillada!%20Quiero%20reservar%20una%20mesa" 
+         class="btn" style="width:100%; background:#25D366; color:#fff; text-align:center; text-decoration:none; padding:16px; border-radius:10px; display:block; font-weight:800; font-size:18px;">
+         Reservar por WhatsApp
+      </a>
+      <small style="display:block; text-align:center; margin-top:8px; color:#666">Te confirmamos en menos de 5 minutos</small>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <div class="container footer-grid">
