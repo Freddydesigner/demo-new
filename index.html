@@ -56,38 +56,48 @@
       max-width:400px; 
     }
     .btn {
-      padding:14px 20px; 
-      text-decoration:none; 
-      font-weight:800; 
-      border-radius:10px;
-      transition:0.3s; 
-      flex:1; 
-      min-width:140px;
-      text-transform:uppercase; 
-      font-size:13px;
-      box-shadow: 0 6px 20px rgba(255,106,0,0.4);
-    }
-   
-    .btn-primario {
+  padding:16px 22px; /* menos alto para que sea más cuadrado */
+  text-decoration:none;
+  font-weight:800;
+  border-radius:12px; /* esquinas un poco más redondas */
+  transition:0.3s;
+  flex:1;
+  min-width:160px; /* menos ancho */
+  max-width:200px; /* para que no se estire tanto */
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:1px; /* se ve más premium */
+  box-shadow: 0 6px 20px rgba(255,106,0,0.4);
+}
+
+.btn-primario {
   background:#ff6a00;
   color:#000;
-  animation: flip-flotar 5s ease-in-out infinite;
+  animation: flip3-lento 9s ease-in-out infinite; /* 9s total, bien lento */
   box-shadow: 0 0 25px rgba(255,106,0,0.6);
   display: inline-block;
   transform-style: preserve-3d;
 }
 
-@keyframes flip-flotar {
+@keyframes flip3-lento {
+  /* 3 GIROS LENTOS */
  0%   { transform: rotateY(0deg) translateY(0px); }
- 10%  { transform: rotateY(180deg) translateY(-6px); } /* se voltea + sube */
- 20%  { transform: rotateY(360deg) translateY(0px); }  /* vuelve a la normal + baja */
- 30%  { transform: rotateY(0deg) translateY(0px); }    /* espera un poco */
- 100%  { transform: rotateY(0deg) translateY(0px); }   /* queda quieto hasta repetir */
+  8%   { transform: rotateY(360deg) translateY(0px); } /* giro 1 lento */
+ 16%  { transform: rotateY(720deg) translateY(0px); } /* giro 2 lento */
+  24%  { transform: rotateY(1080deg) translateY(0px); } /* giro 3 lento */
+  
+  /* PAUSA Y FLOTAR */
+ 30%  { transform: rotateY(1080deg) translateY(-8px); } /* sube */
+ 36%  { transform: rotateY(1080deg) translateY(0px); }   /* baja */
+  
+  /* QUEDA QUIETO EL RESTO DEL TIEMPO */
+ 37%  { transform: rotateY(1080deg) translateY(0px); }
+ 100% { transform: rotateY(1080deg) translateY(0px); }
 }
 
 .btn-primario:hover {
   background:#ff8533;
-  transform: scale(1.05) rotateY(0deg);
+  transform: scale(1.05);
   box-shadow: 0 0 40px rgba(255,106,0,0.9);
   animation: none;
 }
