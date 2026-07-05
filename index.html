@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bendita Parrillada - Valledupar</title>
-  <style>
+ <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      background:#000;
       color:#fff;
       font-family: 'Arial', sans-serif;
       text-align:center;
@@ -17,9 +16,10 @@
       align-items:center;
       min-height:100vh;
       padding:20px;
-      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fondo-parrilla.jpg');
-      background-size: cover;
-      background-position: center;
+      
+      /* ESTA ES LA OPCIÓN 1 - FONDO CON FOTO */
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1200') center/cover no-repeat fixed;
     }
     .ubicacion { color:#ff6a00; letter-spacing:3px; font-size:12px; margin-bottom:20px; font-weight:600; }
     h1 { font-size:48px; color:#fff; margin-bottom:8px; text-transform:uppercase; }
