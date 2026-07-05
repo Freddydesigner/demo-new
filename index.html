@@ -56,40 +56,40 @@
       max-width:400px; 
     }
     .btn {
-      padding:18px 24px; 
+      padding:14px 20px; 
       text-decoration:none; 
       font-weight:800; 
       border-radius:10px;
       transition:0.3s; 
       flex:1; 
-      min-width:160px;
+      min-width:140px;
       text-transform:uppercase; 
-      font-size:14px;
+      font-size:13px;
       box-shadow: 0 6px 20px rgba(255,106,0,0.4);
     }
    
     .btn-primario {
   background:#ff6a00;
   color:#000;
-  animation: flotar-giro 4s ease-in-out infinite; /* más lento y suave */
+  animation: flip-flotar 5s ease-in-out infinite;
   box-shadow: 0 0 25px rgba(255,106,0,0.6);
   display: inline-block;
-  transform-style: preserve-3d; /* para el efecto 3D */
+  transform-style: preserve-3d;
 }
 
-@keyframes flotar-giro {
-  0%   { transform: rotateY(0deg) translateY(0px); }
- 25%  { transform: rotateY(15deg) translateY(-6px); } /* gira poquito + sube */
-  50%  { transform: rotateY(0deg) translateY(0px); }   /* centro */
- 75%  { transform: rotateY(-15deg) translateY(-6px); } /* gira al otro lado + sube */
- 100%  { transform: rotateY(0deg) translateY(0px); }   /* vuelve */
+@keyframes flip-flotar {
+ 0%   { transform: rotateY(0deg) translateY(0px); }
+ 10%  { transform: rotateY(180deg) translateY(-6px); } /* se voltea + sube */
+ 20%  { transform: rotateY(360deg) translateY(0px); }  /* vuelve a la normal + baja */
+ 30%  { transform: rotateY(0deg) translateY(0px); }    /* espera un poco */
+ 100%  { transform: rotateY(0deg) translateY(0px); }   /* queda quieto hasta repetir */
 }
 
 .btn-primario:hover {
   background:#ff8533;
   transform: scale(1.05) rotateY(0deg);
   box-shadow: 0 0 40px rgba(255,106,0,0.9);
-  animation: none; /* quita la animación al pasar mouse */
+  animation: none;
 }
   </style>
 </head>
