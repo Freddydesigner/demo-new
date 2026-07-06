@@ -59,15 +59,14 @@ font-weight; 700;
     .btn-whatsapp{background:var(--accent);color:#000;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;white-space:nowrap}
     .menu-btn{display:none;font-size:24px;background:none;border:0;color:#fff;cursor:pointer}
 
-    
- .hero{
-  padding: 120px 20px 80px;
+    .hero{
+  padding: 160px 20px 120px;
   text-align: center;
-  background: linear-gradient(rgba(10,10,10,.75), rgba(10,10,10,.9)), 
-              url('fondomenu.jpg') center/cover no-repeat; /* AQUÍ ESTÁ TU FOTO */
-  background-attachment: fixed;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+              url('fondomenu.jpg') center/cover no-repeat;
+  background-attachment: fixed; /* FIJA LA FOTO */
   color: #F5F5F4;
-  min-height: 70vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,40 +74,49 @@ font-weight; 700;
 }
 
 .hero h1{
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 16px;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 15px rgba(0,0,0,.7);
+  letter-spacing: -1px;
 }
 
 .hero p{
-  color: #A3A3A3;
-  max-width: 600px;
-  margin: 0 auto 30px;
-  font-size: 1.1rem;
+  color: #F5F5F4;
+  max-width: 680px;
+  margin: 0 auto 45px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
 }
 
 .hero-botones{
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .btn-ghost{
   background: rgba(212,175,55,.1);
-  border: 1px solid #D4AF37;
+  border: 2px solid #D4AF37;
   color: #D4AF37;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 16px 36px;
+  border-radius: 50px;
   text-decoration: none;
-  font-weight: 700;
-  transition: .3s;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  transition: all .3s ease;
+  backdrop-filter: blur(5px);
 }
 .btn-ghost:hover{
   background: #D4AF37;
   color: #0A0A0A;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(212,175,55,.3);
 }
-
+ 
     section{padding:80px 0}
     h2{font-size:2rem;margin-bottom:8px}
     .sub{color:var(--muted);margin-bottom:32px}
@@ -222,30 +230,6 @@ section:first-of-type h1 {
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
-}
-
-/* HOVER: SE PONE BLANCO COMPLETO, NO NARANJA */
-.btn-ghost:hover {
-  background: rgba(255,255,255,0.9);
-  color: #000;
-  border-color: #fff;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 768px){
-  .hero-botones { flex-direction: column; align-items: center; }
-  .btn-ghost { width: 80%; }
-}
-
-@media (max-width: 768px){
-  .hero-botones { 
-    flex-direction: row; 
-    gap: 10px;
-  }
-  .btn-ghost { 
-    width: 48%; /* cada uno ocupa la mitad */
-    font-size: 12px;
-  }
 }
 
 </style>
