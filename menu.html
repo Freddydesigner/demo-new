@@ -118,43 +118,64 @@ header{
 </head>
 <body>
 
-<header style="background:#0A0A0A; padding:30px 0; border-bottom:1px solid #222; text-align:center;">
-  <div class="container">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bendita Parrillada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* COLORES NUEVOS: BLANCO + CIELO AZUL */
+    :root{
+      --blanco: #FFFFFF;
+      --azul-cielo: #87CEEB;
+      --azul-oscuro: #1E90FF;
+      --texto: #222;
+      --gris: #F5F5F5;
+    }
+
+    body{ margin: 0; background: var(--blanco); color: var(--texto); font-family: 'Poppins', sans-serif; }
+    
+    header{ background: var(--blanco); padding: 20px; text-align: center; border-bottom: 2px solid var(--azul-cielo); }
+    .logo span:first-child{ color: var(--texto); font-size: 1.8rem; font-weight: 800; }
+    .logo span:last-child{ color: var(--azul-oscuro); font-size: 1.8rem; font-weight: 800; }
+
+    .hero{ padding: 120px 20px 80px; text-align: center; background: var(--blanco); color: var(--texto); min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .hero h1{ font-size: 3rem; font-weight: 900; margin-bottom: 20px; color: var(--texto); letter-spacing: -1px; }
+    .hero p{ color: #555; max-width: 680px; margin: 0 auto 45px; font-size: 1.2rem; line-height: 1.7; }
+
+    .hero-botones{ display: flex; justify-content: center; gap: 20px; }
+    .btn-ghost{ background: var(--azul-cielo); border: 2px solid var(--azul-cielo); color: var(--blanco); padding: 16px 36px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 15px; letter-spacing: 1.5px; transition: all .3s ease; }
+    .btn-ghost:hover{ background: var(--azul-oscuro); border-color: var(--azul-oscuro); color: var(--blanco); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(30,144,255,.3); }
+
+    @media (max-width: 768px){
+      .hero{ padding: 100px 20px 60px; }
+      .hero h1{ font-size: 2.3rem; }
+      .hero-botones{ flex-direction: column; gap: 15px; align-items: center; }
+      .btn-ghost{ width: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
     <div class="logo">
       <span>Bendita</span> <span>Parrillada</span>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="hero">
-  <h1>Sabor a brasa, <br>carne de verdad.</h1>
-  <p>En Bendita Parrillada solo usamos cortes premium y carbón de leña.
-  Ven a probar la parrilla que Valledupar estaba esperando.</p>
+  <section class="hero">
+    <h1>Sabor a brasa,<br>carne de verdad.</h1>
+    <p>En Bendita Parrillada solo usamos cortes premium y carbón de leña. Ven a probar la parrilla que Valledupar estaba esperando.</p>
+    <div class="hero-botones">
+      <a href="#" class="btn-ghost">GALLERY</a>
+      <a href="index.html" class="btn-ghost">← BACK</a>
+    </div>
+  </section>
 
-  <div class="hero-botones">
-    <a href="galeria.html" class="btn-ghost">GALLERY</a>
-    <a href="index.html" class="btn-ghost">← BACK</a>
-  </div>
-</main>
-</div>
-  </main>
-
-  <section id="menu">
-    <div class="container">
-      <h2>Lo que sale de la parrilla</h2>
-      <p class="sub">Todo hecho al momento, con fuego lento y mucho sabor.</p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Costillar Premium <span class="price">$85.000</span></h3>
-          <p>500g de costilla de res 12h en brasa, con papas criollas y chimichurri.</p>
-        </div>
-        <div class="card">
-          <h3>Parrillada 2 Personas <span class="price">$120.000</span></h3>
-          <p>Chorizo, morcilla, punta de anca, pollo y arepa mantequilla.</p>
-        </div>
-        <div class="card">
-          <h3>Lomo Fino <span class="price">$55.000</span></h3>
-          <p>300g a término perfecto, mantequilla de ajo y vegetales asados.</p>
-
+</body>
+</html>
 </body>
 </html>
