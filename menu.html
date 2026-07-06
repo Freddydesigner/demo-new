@@ -5,68 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Bendita Parrillada | Las mejores parrillas en Valledupar</title>
   <meta name="description" content="Parrilla premium en Valledupar. Cortes de carne a la brasa, chorizo, costillas y cerveza bien fría. Reserva tu mesa hoy.">
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-    :root{
-  --bg:#0A0A0A;
-  --accent:#D4AF37; /* Dorado premium */
-  --accent-2:#25D366;
-  --text:#F5F5F4;
-  --muted:#A3A3;
-  --radius:16px;
-  --shadow:0 10px 30px rgba(0,0,0,.35);
-}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-    img{max-width:100%;display:block;border-radius:12px}
-    .container{width:min(1100px, 90%);margin-inline:auto}
 
-   
-    header{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:#0A0A0A; /* era #0F0F10 */
-  border-bottom:1px solid #222;
-}
-  
-    .logo{
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: 3px;
+ /* COLORES NUEVOS: BLANCO + CIELO AZUL */
+:root{
+  --blanco: #FFFFFF;
+  --azul-cielo: #87CEEB; /* azul cielo */
+  --azul-oscuro: #1E90FF; /* para botones */
+  --texto: #222;
+  --gris: #F5F5F5;
 }
 
-.logo span:first-child{
-  color: #F5F5F4;
-font-weight; 700;
+body{
+  margin: 0;
+  background: var(--blanco);
+  color: var(--texto);
+  font-family: 'Poppins', sans-serif;
 }
 
-.logo span:last-child{
-  color: #D4AF37; /* Parrillada dorado premium */
-  font-family: 'Playfair Display', serif; /* letra elegante de steakhouse */
-  font-weight: 900;
-}
-    .nav-links{display:flex;gap:24px;list-style:none}
-    .nav-links a{color:var(--muted);text-decoration:none;font-weight:500}
-    .nav-links a:hover{color:var(--text)}
-
-    .btn-whatsapp{background:var(--accent);color:#000;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;white-space:nowrap}
-    .menu-btn{display:none;font-size:24px;background:none;border:0;color:#fff;cursor:pointer}
-
-    .hero{
-  padding: 160px 20px 120px;
+/* HEADER BLANCO */
+header{
+  background: var(--blanco);
+  padding: 20px;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
-              url('fondomenu.jpg') center/cover no-repeat;
-  background-attachment: fixed; /* FIJA LA FOTO */
-  color: #F5F5F4;
-  min-height: 90vh;
+  border-bottom: 2px solid var(--azul-cielo);
+}
+.logo span:first-child{
+  color: var(--texto); /* Bendita en negro */
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.logo span:last-child{
+  color: var(--azul-oscuro); /* Parrillada en azul */
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+/* HERO BLANCO */
+.hero{
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: var(--blanco);
+  color: var(--texto);
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,20 +57,19 @@ font-weight; 700;
   font-size: 3rem;
   font-weight: 900;
   margin-bottom: 20px;
-  text-shadow: 0 4px 15px rgba(0,0,0,.7);
+  color: var(--texto);
   letter-spacing: -1px;
 }
 
 .hero p{
-  color: #F5F5F4;
+  color: #555;
   max-width: 680px;
   margin: 0 auto 45px;
   font-size: 1.2rem;
   line-height: 1.7;
-  font-weight: 400;
-  text-shadow: 0 2px 8px rgba(0,0,0,.6);
 }
 
+/* BOTONES AZUL CIELO */
 .hero-botones{
   display: flex;
   justify-content: center;
@@ -98,9 +77,9 @@ font-weight; 700;
 }
 
 .btn-ghost{
-  background: rgba(212,175,55,.1);
-  border: 2px solid #D4AF37;
-  color: #D4AF37;
+  background: var(--azul-cielo);
+  border: 2px solid var(--azul-cielo);
+  color: var(--blanco);
   padding: 16px 36px;
   border-radius: 50px;
   text-decoration: none;
@@ -108,128 +87,31 @@ font-weight; 700;
   font-size: 15px;
   letter-spacing: 1.5px;
   transition: all .3s ease;
-  backdrop-filter: blur(5px);
 }
 .btn-ghost:hover{
-  background: #D4AF37;
-  color: #0A0A0A;
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(212,175,55,.3);
+  background: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  color: var(--blanco);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30,144,255,.3);
 }
- 
-    section{padding:80px 0}
-    h2{font-size:2rem;margin-bottom:8px}
-    .sub{color:var(--muted);margin-bottom:32px}
-    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .card{
-      background:var(--card);padding:20px;border-radius:var(--radius);
-      border:1px solid rgba(255,255,255,.05);transition:.2s
-    }
-    .card:hover{transform:translateY(-5px);border-color:var(--accent)}
-    .card h3{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-    .price{color:var(--accent);font-weight:800}
 
- 
-    .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .reserva{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;background:var(--card);padding:30px;border-radius:var(--radius)}
-    .reserva input{width:100%;padding:12px;margin:8px 0;background:#111;border:1px solid #333;color:#fff;border-radius:8px}
-    footer{background:#0a0a0b;border-top:1px solid #222;padding:40px 0;margin-top:40px;font-size:.9rem;color:var(--muted)}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-
+/* CELULAR */
 @media (max-width: 768px){
-  .hero-botones { 
-    flex-direction: column !important; /* uno arriba otro abajo */
-    align-items: center !important; /* centrados */
-    gap: 10px !important;
-    margin-top: 20px !important;
+  .hero{
+    padding: 100px 20px 60px;
   }
-  .btn-ghost { 
-    width: auto !important;
-    min-width: 150px !important; /* pequeño */
-    font-size: 12px !important;
-    padding: 8px 18px !important;
-    border-radius: 20px !important;
+  .hero h1{
+    font-size: 2.3rem;
   }
-
-.slider{
-  width:100%;
-  max-width:800px;
-  margin:0 auto;
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-.slides{
-  display:flex;
-  animation: slide 9s infinite;
-}
-.slides img{
-  width:100%;
-  flex-shrink:0;
-  height:400px;
-  object-fit:cover;
-}
-
-@keyframes slide{
- 0% { transform: translateX(0); }
- 30% { transform: translateX(0); }
- 33% { transform: translateX(-100%); }
- 63% { transform: translateX(-100%); }
- 66% { transform: translateX(-200%); }
- 96% { transform: translateX(-200%); }
- 100% { transform: translateX(0); }
-}
-
-@media (max-width: 768px){
-  .slides img{ height:250px; }
-
-section:first-of-type p {
-  color: #e0e0e0; /* más blanco */
-  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-section:first-of-type h1 {
-  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
-  line-height: 1.2;
-}
-
-.grid-3 {
-  margin-top: 30px;
-  gap: 16px; /* ya tienes grid arriba, solo agregamos gap */
-}
-.card {
-  padding: 20px;
-}
-
-@media (max-width: 768px){
-  
- 
-    .btn-secundario:hover { background: #ff8333; color: #000; }
-/* CONTENEDOR DE LOS 2 BOTONES */
-.hero-botones {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 25px;
-}
-
-/* BOTONES PEQUEÑOS BLANCOS TRANSPARENTES */
-.btn-ghost {
-  background: rgba(255,255,255,0.1); /* blanco transparente */
-  backdrop-filter: blur(6px); /* efecto vidrio */
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.6); /* borde blanco fino */
-  padding: 10px 20px; /* más pequeños */
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 13px; /* letra más pequeña */
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+  .hero-botones{
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .btn-ghost{
+    width: 240px;
+  }
 }
 
 </style>
