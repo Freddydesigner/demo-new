@@ -65,7 +65,43 @@
     }
     .hero h1{font-size:clamp(2.5rem,5vw,4rem);line-height:1.1;margin-bottom:16px}
     .hero p{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:24px}
-    .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+   
+
+/* CONTENEDOR */
+.hero-botones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+/* LOS 3 BOTONES IGUALES */
+.btn-ghost {
+  background: rgba(0,0,0,0.3); /* fondo negro transparente */
+  backdrop-filter: blur(4px); /* efecto vidrio pro */
+  color: #ffffff;
+  border: 1.5px solid rgba(255,255,255,0.7); /* borde blanco fino */
+  padding: 12px 22px; /* más pequeños */
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-ghost:hover {
+  background: #ff8333; /* al pasar mouse se pone naranja */
+  color: #000;
+  border-color: #ff8333;
+  transform: translateY(-2px);
+}
+
+/* EN CELULAR */
+@media (max-width: 768px){
+  .hero-botones { flex-direction: column; }
+  .btn-ghost { width: 100%; }
+}
 
     /* === SECCIONES / CARDS === */
     section{padding:80px 0}
@@ -228,11 +264,11 @@ section:first-of-type h1 {
       <div class="cta">
         <a href="#menu" class="btn">Ver Menú</a>
 
-<div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 40px 0;">
-  <a href="galeria.html" class="btn btn-primario">VER GALERÍA 📸</a>
-  <a href="index.html" class="btn btn-secundario">← VOLVER AL INICIO</a>
+<div class="hero-botones">
+  <a href="#menu" class="btn btn-ghost">Ver Menú</a>
+  <a href="galeria.html" class="btn btn-ghost">VER GALERÍA 📸</a>
+  <a href="index.html" class="btn btn-ghost">← VOLVER AL INICIO</a>
 </div>
-      </div>
     </div>
   </main>
 
